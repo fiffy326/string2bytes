@@ -5,7 +5,7 @@
 
 void print_c_byte_array(const char* buffer) {
     size_t length = strlen(buffer);
-    printf("const char BYTES[] = {");
+    printf("static const char BYTES[] = {");
     for (size_t i = 0; i < length; i++) {
         printf("0x%02hhX", buffer[i]);
         if (i < (length - 1)) {
