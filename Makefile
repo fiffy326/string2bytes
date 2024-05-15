@@ -17,7 +17,7 @@ INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 CFLAGS := $(INC_FLAGS) -std=c99 -pedantic -Wall -Werror -Wextra -MMD -MP -O3
-LDFLAGS :=
+LDFLAGS := -static
 
 all: $(PROGRAM)
 
