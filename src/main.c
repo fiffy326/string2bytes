@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 void print_c_byte_array(const char* buffer) {
     size_t length = strlen(buffer);
