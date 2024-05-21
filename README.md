@@ -4,7 +4,8 @@ Turns a piped or passed string into a C byte array.
 
 ## Installation
 ```sh
-git clone https://github.com/fiffy326/string2bytes
+git clone https://github.com/fiffy326/string2bytes.c
+cd string2bytes.c
 make
 sudo make install
 ```
