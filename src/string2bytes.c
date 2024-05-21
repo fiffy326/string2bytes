@@ -4,14 +4,14 @@
 
 void print_c_byte_array(const char* buffer) {
     size_t length = strlen(buffer);
-    printf("static const char BYTES[] = {");
+    printf("static const char BYTES[] = { ");
     for (size_t i = 0; i < length; i++) {
         printf("0x%02hhX", buffer[i]);
         if (i < (length - 1)) {
             printf(", ");
         }
     }
-    printf(", 0x00};\n");
+    printf(", 0x00 };\n");
 }
 
 int main(int argc, char** argv) {
@@ -19,9 +19,9 @@ int main(int argc, char** argv) {
     int c, i;
 
     if (argc > 2) {
-        printf("Error: Too many arguments were provided.\n"
-               "See 'man string2bytes' for more information.\n");
-        exit(1);
+        fprintf(stderr, "Error: Too many arguments were provided.\n"
+                "See 'man string2bytes' for usage info.\n");
+        exit(EXIT_FAILURE);
     }
 
     if (argc == 2)
